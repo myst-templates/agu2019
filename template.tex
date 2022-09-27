@@ -238,8 +238,9 @@
 %
 % don't specify bibliographystyle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\bibliography{main}
+[# if doc.bibliography #]
+\bibliography{[- doc.bibliography | join(", ") -]}
+[# endif #]
 
 %Reference citation instructions and examples:
 %

@@ -2,8 +2,9 @@ jtex: v1
 title: AGU Journal
 description: The official 2019 AGU Journal template
 version: 1.0.0
-license: 'GPL-3.0-OR-LATER'
-source: https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Text-requirements
+license: GPL-3.0-OR-LATER
+source: >-
+  https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Text-requirements
 thumbnail: ./thumbnail.png
 authors:
   - name: American Geophysical Union
@@ -15,42 +16,64 @@ tags:
   - journal
   - geoscience
   - earthscience
-
 parts:
   - id: abstract
     required: true
-    description: |
-      A good Abstract will begin with a short description of the problem being addressed, briefly describe the new data or analyses, then briefly states the main conclusion(s) and how they are supported and uncertainties.
+    description: >
+      A good Abstract will begin with a short description of the problem being
+      addressed, briefly describe the new data or analyses, then briefly states
+      the main conclusion(s) and how they are supported and uncertainties.
   - id: availability
+    title: Availability Statement
     required: true
-    description: |
-      AGU requires an Availability Statement for the underlying data needed to understand, evaluate, and build upon the reported research at the time of peer review and publication.
-      Additionally, authors should include an Availability Statement for the software that has a significant impact on the research. Details and templates are in the Availability Statement section of the Data & Software for Authors Guidance:
+    description: >
+      AGU requires an Availability Statement for the underlying data needed to
+      understand, evaluate, and build upon the reported research at the time of
+      peer review and publication.
+
+      Additionally, authors should include an Availability Statement for the
+      software that has a significant impact on the research. Details and
+      templates are in the Availability Statement section of the Data & Software
+      for Authors Guidance:
+
       https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors#availability
-      For physical samples, use the IGSN persistent identifier, see the International Geo Sample Numbers section:
+
+      For physical samples, use the IGSN persistent identifier, see the
+      International Geo Sample Numbers section:
+
       https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors#IGSN
   - id: summary
+    title: Plain Language Summary
     required: false
-    description: |
-      The Plain Language Summary should be written for a broad audience, including journalists and the science-interested public, that will not have a background in your field.
-      A Plain Language Summary is required in GRL, JGR: Planets, JGR: Biogeosciences, JGR: Oceans, G-Cubed, Reviews of Geophysics, and JAMES.
-      see http://sharingscience.agu.org/creating-plain-language-summary/)
+    description: >
+      The Plain Language Summary should be written for a broad audience,
+      including journalists and the science-interested public, that will not
+      have a background in your field.
+
+      A Plain Language Summary is required in GRL, JGR: Planets, JGR:
+      Biogeosciences, JGR: Oceans, G-Cubed, Reviews of Geophysics, and JAMES.
+
+      See also http://sharingscience.agu.org/creating-plain-language-summary/
   - id: acknowledgments
     required: false
-    description: |
+    description: >
       The acknowledgments must list:
+
         - A statement that indicates to the reader where the data supporting the conclusions can be obtained (for example, in the references, tables, supporting information, and other databases).
         - All funding sources related to this work from all authors
         - Any real or perceived financial conflicts of interests for any author
         - Other affiliations for any author that may be perceived as having a conflict of interest with respect to the results of this paper.
-      It is also the appropriate place to thank colleagues and other contributors.
+
+      It is also the appropriate place to thank colleagues and other
+      contributors.
+
       AGU does not normally allow dedications.
 doc:
   - id: title
     required: true
   - id: authors
     required: true
-
+  - id: bibliography
 options:
   - type: choice
     id: journal_name
@@ -82,10 +105,13 @@ options:
     description: Mark the document as draft
   - type: string
     id: keypoint_1
-    description: |
+    description: >
       First of up to three key points (at least one is required)
+
       Key Points summarize the main points and conclusions of the article
-      Each must be 140 characters or fewer with no special characters or punctuation and must be complete sentences
+
+      Each must be 140 characters or fewer with no special characters or
+      punctuation and must be complete sentences
     required: true
     max_chars: 140
   - type: string
@@ -96,26 +122,22 @@ options:
     id: keypoint_3
     description: Third key point
     max_chars: 140
-
 files:
   - template.tex
-  - trackchanges.sty
   - agujournal2019.cls
-
+  - trackchanges.sty
 packages:
+  - apacite
+  - calc
+  - color
   - graphicx
-  - xcolor
-  - url
-  - lineno
+  - ifthen
   - indentfirst
+  - lineno
+  - morefloats
   - ragged2e
   - rotating
-  - apacite
-  - color
-  - ifthen
-  - calc
   - soul
-  - morefloats
-  - lineno
   - trackchanges
-  - soul
+  - url
+  - xcolor
