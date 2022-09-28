@@ -16,6 +16,8 @@ tags:
   - journal
   - geoscience
   - earthscience
+style:
+  citation: numerical-only
 parts:
   - id: abstract
     required: true
