@@ -2,7 +2,7 @@ jtex: v1
 title: AGU Journal
 description: The official 2019 AGU Journal template
 version: 1.0.0
-license: GPL-3.0-OR-LATER
+license: GPL-3.0-or-later
 source: >-
   https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Text-requirements
 thumbnail: ./thumbnail.png
