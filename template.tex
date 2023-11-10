@@ -159,7 +159,9 @@
 
 [# if parts.keypoints #]
 \begin{keypoints}
-[-parts.keypoints | replace("\\begin{itemize}\n", "") | replace("\n\\end{itemize}", "")-]
+[# for keypoint in parts.keypoints #]
+\item [-keypoint-]
+[# endfor #]
 \end{keypoints}
 [# endif #]
 
