@@ -85,6 +85,7 @@ doc:
   - id: authors
     required: true
   - id: bibliography
+  - id: affiliations
 options:
   - type: choice
     id: journal_name
