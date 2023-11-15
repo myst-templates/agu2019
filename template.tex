@@ -157,15 +157,13 @@
 % \item	Each must be 140 characters or fewer with no special characters or punctuation and must be complete sentences
 % \end{keypoints}
 
+[# if parts.keypoints #]
 \begin{keypoints}
-  \item [-options.keypoint_1-]
-[# if options.keypoint_2 #]
-  \item [-options.keypoint_2-]
-[# endif #]
-[# if options.keypoint_3 #]
-  \item [-options.keypoint_3-]
-[# endif #]
+[# for keypoint in parts.keypoints #]
+\item [-keypoint-]
+[# endfor #]
 \end{keypoints}
+[# endif #]
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -215,9 +213,9 @@
 %For physical samples, use the IGSN persistent identifier, see the International Geo Sample Numbers section:
 % https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors#IGSN
 
-[# if parts.availability #]
+[# if parts.data_availability #]
 \section*{Open Research}
-[-parts.availability-]
+[-parts.data_availability-]
 [# endif #]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

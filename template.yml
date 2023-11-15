@@ -25,7 +25,7 @@ parts:
       A good Abstract will begin with a short description of the problem being
       addressed, briefly describe the new data or analyses, then briefly states
       the main conclusion(s) and how they are supported and uncertainties.
-  - id: availability
+  - id: data_availability
     title: Availability Statement
     required: true
     description: >
@@ -70,12 +70,23 @@ parts:
       contributors.
 
       AGU does not normally allow dedications.
+  - id: keypoints
+    required: true
+    as_list: true
+    description: >
+      Key Points summarize the main points and conclusions of the article.
+
+      Include up to three key points (at least one is required). Must be a list in the frontmatter.
+
+      Each must be 140 characters or fewer with no special characters or
+      punctuation and must be complete sentences
 doc:
   - id: title
     required: true
   - id: authors
     required: true
   - id: bibliography
+  - id: affiliations
 options:
   - type: choice
     id: journal_name
@@ -106,25 +117,6 @@ options:
   - type: boolean
     id: draft
     description: Mark the document as draft
-  - type: string
-    id: keypoint_1
-    description: >
-      First of up to three key points (at least one is required)
-
-      Key Points summarize the main points and conclusions of the article
-
-      Each must be 140 characters or fewer with no special characters or
-      punctuation and must be complete sentences
-    required: true
-    max_chars: 140
-  - type: string
-    id: keypoint_2
-    description: Second key point
-    max_chars: 140
-  - type: string
-    id: keypoint_3
-    description: Third key point
-    max_chars: 140
 files:
   - template.tex
   - agujournal2019.cls
